@@ -1,7 +1,5 @@
-*this is italics*
+# Lab Reports
 
-**this is bold**
+*Abhishek Govindarasu*
 
-```python
-print("hi")
-```
+[Lab Report 1](lab-report-1-week-2)
