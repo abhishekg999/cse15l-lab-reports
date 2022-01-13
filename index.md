@@ -1,6 +1,6 @@
 *this is italics*
 **this is bold**
 
-'''python
+```python
 print("hi")
-'''
+```
