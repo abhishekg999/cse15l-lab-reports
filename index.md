@@ -1,4 +1,5 @@
-*this is italics*\n
+*this is italics*
+
 **this is bold**
 
 ```python
