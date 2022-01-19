@@ -30,6 +30,7 @@
 > 6. Optimization
 >> ```bash
 >> scp file.java cs15lwi22zzz@ieng6.ucsd.edu:~/; ssh cs15lwi22zzz@ieng6.ucsd.edu "javac file.java; java file"
+>> ```
 
 
 
