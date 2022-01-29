@@ -7,7 +7,7 @@
 
 1. Debug for error checking
 ![Diff_0](diff_0.png)
-[file_0](markdown5.md)
+[file_0](markdown-parse/markdown5.md)
 Adds println to show the value of the current
 index for debug purposes. This is to fix runtime 
 errors that occur when non-matching parenthesis
@@ -16,7 +16,7 @@ or no links are found in the file.
 
 2. Fix for non-matching brackets/paranthesis 
 ![Diff_1](diff_1.png)
-[file_1](markdown3.md)
+[file_1](markdown-parse/markdown3.md)
 
 The previous code will find the indices of opening
 and closing parenthesis using java's indexOf, however
@@ -27,7 +27,7 @@ ensures all indices are valid before parsing a url.
 
 3. Fix for parsing images vs. links
 ![Diff_2](diff_2.png)
-[file_2](markdown4.md)
+[file_2](markdown-parse/markdown4.md)
 
 The previous code will parse image source the same
 way as the href of links. This fix ensures images
