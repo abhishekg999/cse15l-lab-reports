@@ -8,6 +8,7 @@
 1. Debug for error checking
 ![Diff_0](diff_0.png)
 [file_0](markdown_test/markdown5.md)
+
 Adds println to show the value of the current
 index for debug purposes. This is to fix runtime 
 errors that occur when non-matching parenthesis
