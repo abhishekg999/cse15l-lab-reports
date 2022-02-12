@@ -3,9 +3,9 @@
 *Abhishek Govindarasu*
 
 
-## Streamlining SSH Configuration
+# Streamlining SSH Configuration
 
-# 1. Edit ssh config file
+## 1. Edit ssh config file
 ![config](ssh_config.png)
 
 ```bash
@@ -22,7 +22,7 @@ Host ieng6
 ```
 replacing qqq with the user account letters.
 
-# 2. SSH with host alias
+## 2. SSH with host alias
 ![ssh](ssh_login_d.png)
 
 ```bash
@@ -32,7 +32,7 @@ ssh ieng6
 Will directly login you into your user account
 on ieng6.ucsd.edu. 
 
-# 3. SCP with host alias
+## 3. SCP with host alias
 ![scp](scp_d.png)
 
 ```bash
