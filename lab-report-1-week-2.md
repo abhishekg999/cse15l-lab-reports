@@ -25,12 +25,11 @@ scp file cs15lwi22zzz@ieng6.ucsd.edu:~/
 ```
 
 ## 5. SSH Keys
-```bash
-ssh-keygen
-```
+```bash ssh-keygen```
+![Login](login_key.png)
 
 Now login without password
-![Login](login_key.png)
+
 
 ## 6. Optimization
 ```bash
