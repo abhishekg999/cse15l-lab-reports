@@ -51,6 +51,15 @@ scp file.java cs15lwi22zzz@ieng6.ucsd.edu:~/; ssh cs15lwi22zzz@ieng6.ucsd.edu "j
 ```
 
 
+![fast](fast.jpg)
+
+
+The message takes 106 characters to type plus enter, so
+107 keystrokes in total. For additional tests however, it 
+takes 2 (up_arrow + enter).
+
+
+
 
 
 
