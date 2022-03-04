@@ -84,10 +84,12 @@ text.
 
 
 ## 2. Changes for snippit 2
-Yes, this solution is scuffed as heck but you can `.+` and then for loop in the capture group to ensure all special characters are escaped. There might be an exclusivey regex solution using lookback but regex is dumb.
+Yes, this solution is scuffed but you can `.+` and then for loop in the capture group to ensure all special characters are escaped. There might be an exclusivey regex solution.
 
 Edit this took me way too long to figure out holy.
-```/(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*|\n.+|.+\n|\n.+\n)\)```
+```(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*|\n.+|.+\n|\n.+\n)\)```
+
+For handling the first example in this text case using the lazy quantifier `?` in the second query after `.*` works: ```(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*?|\n.+?|.+?\n|\n.+?\n)\)```, but this directly conflicts the second case as the lazy quantifier won't match both instances. There may be a way and if so, it would be <10 lines.
 
 
 ## 3. Changes for snippit 3
