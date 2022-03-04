@@ -74,3 +74,25 @@ And then there's more text
 
 My Code  
 ![My Snippit 2 Render](m_snp3.jpg)
+
+
+
+## Changes
+1. Changes for snippit 1
+Yes, changing the regex from `(?<![!\\])\[.+\]\((.*)\)` to `(?<![!\\])\[[a-zA-Z0-9_ ]+\]\((.*)\)` will exclude all special characters including those code blocks from being present in the link
+text.
+
+
+2. Changes for snippit 2
+Yes, this solution is scuffed as heck but you can `.+` and then for loop in the capture group to ensure all special characters are escaped. There might be an exclusivey regex solution using lookback but regex is dumb.
+
+Edit this took me way too long to figure out holy.
+```
+/(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*|\n.+|.+\n|\n.+\n)\)
+```
+
+
+3. Changes for snippit 3
+Yes, markdown convention is to treat 2 new lines as a force line break.
+For the url itself new lines are not allowed inside the link itself, only around the brackets. Allowing newlines involves changing (including edits from 1) `(?<![!\\])\[[a-zA-Z0-9_ ]+\]\((.*)\)` to `(?<![!\\])\[[a-zA-Z0-9_ ]+\]\((.*|\n.+|.+\n|\n.+\n)\)`
+For the links itself however, new lines are allowed only if consecutive new lines aren't present.
