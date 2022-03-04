@@ -18,7 +18,8 @@
 
 ![Snippit 1 Render](snp1.jpg)
 
-My Code
+
+My Code  
 ![My Snippit 1 Render](m_snp1.jpg)
 
 
@@ -34,7 +35,8 @@ My Code
 
 ![Snippit 2 Render](snp2.jpg)
 
-My Code
+
+My Code  
 ![My Snippit 2 Render](m_snp2.jpg)
 
 
@@ -69,5 +71,6 @@ And then there's more text
 
 ![Snippit 2 Render](snp3.jpg)
 
-My Code
+
+My Code  
 ![My Snippit 2 Render](m_snp3.jpg)
