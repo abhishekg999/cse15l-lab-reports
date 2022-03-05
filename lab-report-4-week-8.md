@@ -89,10 +89,11 @@ Yes, this solution is scuffed but you can `.+` and then for loop in the capture 
 Edit this took me way too long to figure out holy.
 ```(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*|\n.+|.+\n|\n.+\n)\)```
 
-For handling the first example in this text case using the lazy quantifier `?` in the second query after `.*` works: ```(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*?|\n.+?|.+?\n|\n.+?\n)\)```, but this directly conflicts the second case as the lazy quantifier won't match both instances. There may be a way and if so, it would be <10 lines.
+For handling the first example in this text case using the lazy quantifier `?` in the second query after `.*` works: ```(?<![!\\])\[(?:[a-zA-Z_ ]+(?:\\[\[\]\(\)\!`]+)*)+[a-zA-Z]*\]\((.*?|\n.+?|.+?\n|\n.+?\n)\)```, but this directly conflicts the second case as the lazy quantifier won't match both instances. There may be a way and if so, it would be <10 lines. Even if without regex, a simple way would to be to capture the entire content, then loop through that and check for matching brackets, which would also be < 10 lines.
 
 
 ## 3. Changes for snippit 3
 Yes, markdown convention is to treat 2 new lines as a force line break.
 For the url itself new lines are not allowed inside the link itself, only around the brackets. Allowing newlines involves changing (including edits from 1) `(?<![!\\])\[[a-zA-Z0-9_ ]+\]\((.*)\)` to `(?<![!\\])\[[a-zA-Z0-9_ ]+\]\((.*|\n.+|.+\n|\n.+\n)\)`
-For the links itself however, new lines are allowed only if consecutive new lines aren't present.
+For the links itself however, new lines are allowed only if consecutive new lines aren't present. The regex `(?<![!\\])\[(?:[a-zA-Z0-9_ ]+\n{0,1})\]\((.*|\n.+|.+\n|\n.+\n)\)` will
+satisfy that case.
