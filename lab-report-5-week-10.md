@@ -1,4 +1,4 @@
-vim# Lab Report Week 8
+# Lab Report Week 8
 
 *Abhishek Govindarasu*
 
@@ -71,4 +71,4 @@ While the main implementation returns `[]`
 Links should not have spaces in them, so the main implementation is correct.
 The bug in by code is that in the regex:
 ``(?<![!\\\\])\\[(?:[a-zA-Z_ ]+(?:\\\\[\\[\\]\\(\\)\\!`]+)*)+[a-zA-Z]*\\]\\((.*?|\\n.+?|.+?\\n|\\n.+?\\n)\\)``
-It uses `.` to check for repeated characters in ``(.*?|\\n.+?|.+?\\n|\\n.+?\\n)``. This means that all characters including spaces is allowed and accepted in the link field. The fix is to replace every instance of `.` in that part of the regex to a more specific character class, maybe `[a-ZA-Z0-9_]` for example, which would then only allow those characters to be present in the link
+It uses `.` to check for repeated characters in ``(.*?|\\n.+?|.+?\\n|\\n.+?\\n)``. This means that all characters including spaces is allowed and accepted in the link field. The fix is to replace every instance of `.` in that part of the regex to a more specific character class, maybe `[a-ZA-Z0-9_]` for example, which would then only allow those characters to be present in the link.
